@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>date-holidays export</title>
+  <style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    padding: 0 2em;
+  }
+  </style>
+</head>
+<body>
+  <script src="./index.js" type="text/javascript"></script>
+  <script type="text/javascript">
+      (function() {
+          var dt = new Date(2020, 0, 1); // new year
+          console.log(holidays.isHoliday(dt));
+          var dt = new Date(2020, 0, 2); // January 2
+          console.log(holidays.isHoliday(dt));
+      })();
+  </script>
+</body>
+</html>

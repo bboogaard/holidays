@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "Holidays",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -s holidays src/index.js | uglifyjs > index.js"
+  },
+  "author": "commenthol <commenthol@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "uglify-js": "^3.9.3"
+  }
+}

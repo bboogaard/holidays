@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "date-holidays-bundle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -o index.js src/index.js"
+  },
+  "author": "commenthol <commenthol@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "date-holidays": "^1.5.1"
+  }
+}
