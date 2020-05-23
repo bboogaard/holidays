@@ -15,10 +15,14 @@
   <script src="./index.js" type="text/javascript"></script>
   <script type="text/javascript">
       (function() {
-          var dt = new Date(2020, 0, 1); // new year
-          console.log(holidays.isHoliday(dt));
-          var dt = new Date(2020, 0, 2); // January 2
-          console.log(holidays.isHoliday(dt));
+          console.log(holidays.getHolidayDate(2020, 'nieuwjaar'));
+          console.log(holidays.getHolidayDate(2020, 'paasmaandag'));
+          console.log(holidays.getHolidayDate(2020, 'koningsdag'));
+          console.log(holidays.getHolidayDate(2020, 'bevrijdingsdag'));
+          console.log(holidays.getHolidayDate(2020, 'olh-hemelvaart'));
+          console.log(holidays.getHolidayDate(2020, 'pinkstermaandag'));
+          console.log(holidays.getHolidayDate(2020, 'kerstmis'));
+          console.log(holidays.getHolidayDate(2020, 'tweede-kerstdag'));
       })();
   </script>
 </body>

@@ -1,16 +1,13 @@
 var dates = require('../data/holidays.json');
 
-function leadingZero(val) {
-    return ('0' + val).slice(-2);
+function getHolidayDate(year, holiday) {
+    var yearDates = dates[year] !== undefined ? dates[year] : {};
+    var date = yearDates[holiday] !== undefined ? yearDates[holiday] : null;
+    if (!date) {
+        return null;
+    }
+    let [yr, mn, dt] = date.date.split(',');
+    return new Date(yr, mn, dt);
 }
 
-function formatDate(dt) {
-    return dt.getFullYear() + '-' + leadingZero(dt.getMonth() + 1) + '-' + leadingZero(dt.getDate());
-}
-
-function isHoliday(dt) {
-    var date = formatDate(dt);
-    return dates.indexOf(date) !== -1;
-}
-
-module.exports = {isHoliday: isHoliday}
+module.exports = {getHolidayDate: getHolidayDate}
